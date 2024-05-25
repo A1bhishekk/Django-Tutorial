@@ -77,3 +77,71 @@ python manage.py runserver portnumber(optional)
 ```
 
 2. Open your web browser and navigate to http://127.0.0.1:8000. You should see the Django welcome page, indicating that your project is set up correctly.
+
+### 6. Configure static files and templates
+
+1. Create a folder named `templates` in the root directory of your project.
+2. Create a folder named `static` in the root directory of your project.
+3. In the `settings.py` file of your project, add the following lines:
+
+```python
+import os # Add this import statement at the top of the file
+
+TEMPLATES = [
+    {
+        ...
+        'DIRS': ['templates'],
+        ...
+    },
+]
+
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
+
+```
+
+### 7. Load CSS and JavaScript files
+
+1. Create a CSS file named `styles.css` in the `static` directory.
+2. Create a JavaScript file named `scripts.js` in the `static` directory.
+3. Link the CSS and JavaScript files in your HTML templates:
+
+```html
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Django Project</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}" />
+  </head>
+  <body>
+    <h1>Welcome to my Django project!</h1>
+    <script src="{% static 'script.js' %}"></script>
+  </body>
+</html>
+```
+
+### 8. Create Django Apps
+
+1. Create a Django app by running:
+
+```bash
+python manage.py startapp yourappname
+```
+
+Replace myapp with the name you want for your app.
+
+2. Add the app to the `INSTALLED_APPS` list in the `settings.py` file.
+
+```python
+INSTALLED_APPS = [
+    ...
+    'yourappname',
+]
+```

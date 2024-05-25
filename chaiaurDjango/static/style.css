@@ -1,0 +1,149 @@
+span {
+    color: red;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #001f3f;
+    /* Darker shade matching the navbar */
+    color: #ffffff;
+    /* White text color for the body */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #00274d;
+    /* Dark blue background */
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    /* White text color for the logo */
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    /* White text color for links */
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #1a4a7c;
+    /* Lighter blue background on hover */
+    color: #ffffff;
+    /* Ensure text color remains white on hover */
+}
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    color: #ffffff;
+    /* White text color for headings and paragraphs */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #003366;
+    /* Darker shade for form background */
+    border-radius: 8px;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input,
+textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #1a4a7c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #03294d;
+}
+
+/* Specific styles for the About page */
+.about-list {
+    list-style-type: disc;
+    /* Bullet points */
+    margin-left: 20px;
+    /* Indent list */
+    color: #d1e0e0;
+    /* Light cyan color for the bullet points */
+}
+
+.about-list li {
+    margin-bottom: 10px;
+    /* Space between list items */
+}
+
+/* Add padding to the main content block */
+.content {
+    padding: 20px;
+    /* Add padding to all sides */
+}
+
+/* Add styles for the All Chai page */
+.chai-list {
+    /* list-style-type: none; */
+    /* Remove default list styling */
+    padding-left: 50;
+    /* Remove default left padding for lists */
+    color: #d1e0e0;
+}
+
+.chai-list li {
+    margin-bottom: 10px;
+    /* Space between list items */
+}
