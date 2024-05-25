@@ -57,7 +57,7 @@ python -m pip install Django==5.0.6
 1. Create a new Django project by running:
 
 ```bash
-django-admin startproject myproject portnumber(optional)
+django-admin startproject myproject
 ```
 
 Replace myproject with the name you want for your project.
@@ -73,7 +73,7 @@ cd myproject
 1. Run the development server:
 
 ```bash
-python manage.py runserver
+python manage.py runserver portnumber(optional)
 ```
 
 2. Open your web browser and navigate to http://127.0.0.1:8000. You should see the Django welcome page, indicating that your project is set up correctly.
