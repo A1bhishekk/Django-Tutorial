@@ -145,3 +145,95 @@ INSTALLED_APPS = [
     'yourappname',
 ]
 ```
+
+3. Create templates and static directories inside the app directory for app-specific templates and static files.
+
+4. Create views, models, and URLs for your app as needed.
+
+5. include the app's URLs in the project's `urls.py` file.
+
+```python
+from django.urls import path, include
+
+urlpatterns = [
+    path('yourappname/', include('yourappname.urls')),
+]
+```
+
+
+## Talwind CSS Setup
+
+1. Install Tailwind CSS and its dependencies:
+
+```bash
+pip install django-tailwind
+pip install 'django-tailwind[reload]'
+```
+2. In the project's root directory, run the following command to generate the Tailwind CSS configuration file:
+
+```bash
+python manage.py tailwind init
+```
+
+3. Add `'tailwind'` to the `INSTALLED_APPS` list in the `settings.py` file.
+
+```python
+INSTALLED_APPS = [
+    ...
+    'tailwind',
+    'theme',
+]
+```
+
+3. Add the following lines to the `settings.py` file:
+
+```python
+TAILWIND_APP_NAME = 'theme'
+INTERNAL_IPS = ['127.0.0.1']
+```
+4. Install  tailwind CSS
+
+```bash
+python manage.py tailwind install
+```
+
+5. Run the tailwind CSS server
+
+```bash
+python manage.py tailwind start (in development mode)
+python manage.py tailwind build (in production mode)
+```
+
+6. Include the Tailwind CSS template tags in your HTML templates:
+
+```html
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Django Project</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}" />
+    {% tailwind_css %}
+  </head>
+  <body>
+    <h1>Welcome to my Django project!</h1>
+    <script src="{% static 'script.js' %}"></script>
+  </body>
+
+```
+7. Add NPM path to the `settings.py` file
+- check the path of your npm bin by running `which npm` in your terminal
+- Add the path to the `settings.py` file
+
+
+```python
+NPM_BIN_PATH = '/path/to/your/npm/bin'
+```
+
+## Django hot reload
+
+
+
