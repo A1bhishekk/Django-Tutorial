@@ -35,11 +35,11 @@ A virtual environment helps you manage dependencies for your project, isolating 
 
 - On Windows:
   ```bash
-  .\env\Scripts\activate
+  .\.venv\Scripts\activate
   ```
 - On macOS and Linux:
   ```bash
-  source env/bin/activate
+  source .venv/bin/activate
   ```
 
 After activation, your terminal should show `(env)` at the beginning of the prompt, indicating that the virtual environment is active.
